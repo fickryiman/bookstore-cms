@@ -50,7 +50,7 @@ I will need to build a website with two subpages:
 
 However, I will only need to implement the /books page (see the image below). The /categories page will stay empty in this MVP (will develop this page on the future).
 <p align="center">
-  <img src="./public/bookstore.png" alt="books" width="300px" />
+  <img src="./public/bookstore.png" alt="books" width="500px" />
 </p>
 
 ### Projects list
