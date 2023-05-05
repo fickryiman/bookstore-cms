@@ -161,9 +161,10 @@ Create components inside of the /components directory:
 ### Key Features <a name="key-features"></a>
 
 <!-- > Describe between 1-3 key features of the application. -->
-- Make simple calculations.
-- Read a random math-related quote.
-- single page apps (SPA).
+- display a list of books 
+- add a book
+- remove a selected book
+- single page apps (SPA)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -196,8 +197,8 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd math-magicians
-  git git@github.com:fickryiman/math-magicians.git
+  cd bookstore-cms
+  git git@github.com:fickryiman/bookstore-cms.git
 ```
 
 
@@ -206,7 +207,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd math-magicians
+  cd bookstore-cms
   npm install
 ```
 
@@ -246,7 +247,7 @@ You can deploy this project using:
 GitHub Pages
 Example:
 ```sh
-https://fickryiman.github.io/math-magicians/
+git@github.com:fickryiman/bookstore-cms.git
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -278,7 +279,7 @@ https://fickryiman.github.io/math-magicians/
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/fickryiman/math-magicians/issues](../../issues/).
+Feel free to check the [https://github.com/fickryiman/bookstore-cms/issues](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
