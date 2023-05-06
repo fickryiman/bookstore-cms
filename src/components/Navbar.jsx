@@ -30,6 +30,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <button type="buttons"></button>
     </nav>
   );
 };
