@@ -1,10 +1,13 @@
-.lists {
+.card {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.264);
 }
 
 .list {
-  margin-bottom: 20px;
+  padding: 10px;
 }
 
 .category {

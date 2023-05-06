@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import styles from '../styles/BookstoreItem.module.css';
+import styles from '../styles/Item.module.css';
 
-const BookstoreItem = ({ bookstore }) => (
-  <div className={styles.lists}>
+const Item = ({ bookstore }) => (
+  <div className={styles.card}>
     <div className={styles.list}>
       <div className={styles.category}>
         {bookstore.category}
@@ -17,4 +17,4 @@ const BookstoreItem = ({ bookstore }) => (
   </div>
 );
 
-export default BookstoreItem;
+export default Item;

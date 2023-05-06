@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import styles from '../styles/BookstoreList.module.css';
-import BookstoreItem from './BookstoreItem';
+import styles from '../styles/List.module.css';
+import BookstoreItem from './Item';
 
-const BookstoreList = ({ bookstores }) => (
+const List = ({ bookstores }) => (
   <div className={styles.bookstoreContainer}>
     {bookstores.map((bookstore) => (
       <BookstoreItem bookstore={bookstore} key={bookstore.id} />
@@ -10,4 +10,4 @@ const BookstoreList = ({ bookstores }) => (
   </div>
 );
 
-export default BookstoreList;
+export default List;

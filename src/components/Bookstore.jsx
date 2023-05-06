@@ -1,9 +1,9 @@
-import styles from '../styles/BookstoreLogic.module.css';
+import styles from '../styles/Bookstore.module.css';
 
-import BookstoreList from './BookstoreList';
-import BookstoreInput from './BookstoreInput';
+import BookstoreList from './List';
+import BookstoreInput from './Input';
 
-const BookstoreLogic = () => {
+const Bookstore = () => {
   const bookstores = [
     {
       id: 1,
@@ -39,4 +39,4 @@ const BookstoreLogic = () => {
   );
 };
 
-export default BookstoreLogic;
+export default Bookstore;
