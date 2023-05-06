@@ -17,16 +17,19 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <h1 className={styles.title}>Bookstore CMS</h1>
-      <div className={styles.links}>
+      <NavLink className={styles.title} to="#">Bookstore CMS</NavLink>
+      <ul className={styles.links}>
         {links.map((link) => (
           <li key={link.id}>
-            <NavLink className={styles.link} to={link.path}>
+            <NavLink
+              className={`${styles.link} ${styles.activeLink}`}
+              to={link.path}
+            >
               {link.text}
             </NavLink>
           </li>
         ))}
-      </div>
+      </ul>
     </nav>
   );
 };
