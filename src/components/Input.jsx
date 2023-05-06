@@ -1,11 +1,17 @@
 import { useState } from 'react';
 
 const Input = () => {
-  const [book, setBook] = useState('');
+  const [state, setState] = useState({
+    book: '',
+    category: '',
+  });
   // const [category, setCategory] = useState('');
 
   const handleChange = (e) => {
-    setBook(e.target.value);
+    setState({
+      ...state,
+      [e.target.value]: e.target.value,
+    });
   };
 
   return (
@@ -13,12 +19,21 @@ const Input = () => {
       <h2>ADD NEW BOOK</h2>
       <form>
         <label>
-          <input type="text" value={book} onChange={handleChange} />
+          <input
+            name="book"
+            type="text"
+            placeholder="Book Title"
+            value={state.book}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          <input type="text" value={state.book} onChange={handleChange} />
         </label>
       </form>
       <h5>
         Book:
-        {book}
+        {state.book}
       </h5>
     </>
   );
