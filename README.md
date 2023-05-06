@@ -187,7 +187,7 @@ Create components inside of the /components directory:
 ## 🚀 Live Demo <a name=""></a>
 
 <!-- > Add a link to your deployed project. -->
-- Click the following url for [... Live Demo ...](https://math-magicians-giuvx85y6-fickryiman.vercel.app/)
+- Click the following url for [... Live Demo ...]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
