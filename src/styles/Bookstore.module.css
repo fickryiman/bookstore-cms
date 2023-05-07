@@ -1,4 +1,10 @@
 .container {
-  margin-right: 5%;
-  margin-left: 5%;
+  padding: 4%;
+}
+
+.horizontalDivider {
+  height: 0.125rem;
+  background-color: #e8e8e8;
+  width: 100%;
+  margin: 2.5rem 0 1.813rem;
 }

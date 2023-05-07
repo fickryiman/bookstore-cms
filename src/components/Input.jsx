@@ -49,11 +49,6 @@ const Input = () => {
           ADD BOOK
         </button>
       </form>
-      <h5>
-        Book:
-        {state.book}
-        {state.category}
-      </h5>
     </section>
   );
 };

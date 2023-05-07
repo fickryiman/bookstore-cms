@@ -34,6 +34,7 @@ const Bookstore = () => {
   return (
     <div className={styles.container}>
       <BookstoreList bookstores={bookstores} />
+      <div className={styles.horizontalDivider} />
       <BookstoreInput />
     </div>
   );

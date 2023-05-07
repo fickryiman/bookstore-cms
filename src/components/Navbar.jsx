@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { BsPersonFill } from 'react-icons/bs';
 import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
@@ -30,7 +31,14 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <button type="buttons"></button>
+      <button
+        type="button"
+        className={styles.iconButton}
+      >
+        <span className={`${styles.profileIcon} ${styles.primaryColor}`}>
+          <BsPersonFill />
+        </span>
+      </button>
     </nav>
   );
 };
