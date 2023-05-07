@@ -74,7 +74,20 @@ This is the first project of the Bookstore application. I will set up the enviro
 - First, make sure I have [Node.js](https://nodejs.org/en/) installed on my local machine
 - Setup a new React application using [Create React App](https://create-react-app.dev/)
 - The application should run in the browser without errors
-- 
+
+- splitted UI into these components:
+  1. BookStoreApp: the parent or root component. It holds two direct child components.
+  2. Header: display the backstore heading text.
+  3. BookStoreLogic: holds the application logic. It includes two direct child.
+  4. BookstoreTodo: will take the user’s input.
+  5. BookStoreList: serves as a container for the bookstore items.
+  6. BookStoreItem: renders the individual bookstore item.
+
+<p align="center">
+  <img src="./public/bookstore_app_components.png" alt="books" width="100%" />
+</p>
+
+  
 #### Project 2: Add reducers and actions.
 Install [React Router V6](https://reactrouter.com/en/main/start/tutorial#setup)
 [Setup router](https://reactrouter.com/en/main/start/tutorial#adding-a-router) inside of <App>
@@ -88,6 +101,7 @@ Create components inside of the /components directory:
  - Contains a list to renders individual books
  - Contains a form to create new books
  - Contains a navigation to link to the 2 routes you created
+
 #### Project 4: Connect to API.
 
 #### Project 5: Styling.
@@ -173,7 +187,7 @@ Create components inside of the /components directory:
 ## 🚀 Live Demo <a name=""></a>
 
 <!-- > Add a link to your deployed project. -->
-- Click the following url for [... Live Demo ...](https://math-magicians-giuvx85y6-fickryiman.vercel.app/)
+- Click the following url for [... Live Demo ...]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
