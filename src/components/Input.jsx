@@ -1,16 +1,19 @@
 /* eslint-disable react/prop-types */
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
-import styles from '../styles/Input.module.css';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
+import styles from '../styles/Input.module.css';
 
 const Input = () => {
-  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('');
+  // const [state, setState] = useState({
+  //   title: '',
+  //   category: '',
+  // });
 
-  const [state, setState] = useState({
-    book: '',
-    category: '',
-  });
+  const dispatch = useDispatch();
 
   const categories = ['Action', 'Science Fiction', 'Economy', 'Nonfiction'];
 
@@ -20,38 +23,47 @@ const Input = () => {
     </option>
   ));
 
-  const handleChange = (e) => {
-    setState({
-      ...state,
-      [e.target.value]: e.target.value,
-    });
+  // const handleChange = (e) => {
+  //   setState({
+  //     ...state,
+  //     [e.target.value]: e.target.value,
+  //   });
+  // };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const book = {
+      id: uuidv4(),
+      title,
+      category,
+    };
+    setTitle('');
+    setCategory('');
+    dispatch(addBook(book));
   };
 
   return (
     <section>
       <h2 className={styles.formTitle}>ADD NEW BOOK</h2>
-      <form className={styles.addForm}>
+      <form className={styles.addForm} onSubmit={handleSubmit}>
         <input
-          name="book"
+          name="title"
           type="text"
           placeholder="Book Title"
+          value={title}
           className={`${styles.input} ${styles.titleInput}`}
-          onChange={handleChange}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <select
-          id="category"
           name="category"
           type="text"
+          value={category}
           className={`${styles.input} ${styles.categoryInput}`}
-          onChange={handleChange}
+          onChange={(e) => setCategory(e.target.value)}
         >
           {categoryOptions}
         </select>
-        <button
-          type="submit"
-          className={styles.primaryButtonBig}
-          onClick={() => dispatch(addBook({ title: 'book', category: 'category' }))}
-        >
+        <button type="submit" className={styles.primaryButtonBig}>
           ADD BOOK
         </button>
       </form>
