@@ -8,10 +8,6 @@ import styles from '../styles/Input.module.css';
 const Input = () => {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
-  // const [state, setState] = useState({
-  //   title: '',
-  //   category: '',
-  // });
 
   const dispatch = useDispatch();
 
@@ -22,13 +18,6 @@ const Input = () => {
       {category}
     </option>
   ));
-
-  // const handleChange = (e) => {
-  //   setState({
-  //     ...state,
-  //     [e.target.value]: e.target.value,
-  //   });
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
