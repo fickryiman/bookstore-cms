@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700&display=swap');
+
 .container {
   margin-left: 5%;
+}
+
+.primaryButtonBig {
+  cursor: pointer;
+  width: 20%;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+.message {
+  margin-left: 5%;
+  font-family: "Roboto Slab", serif;
+  margin-top: 5%;
+  font-size: 2rem;
 }
