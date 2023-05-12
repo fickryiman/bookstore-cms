@@ -1,22 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 import styles from '../styles/Categories.module.css';
 
 const Categories = () => {
-  const status = useSelector((state) => state.category);
+  const [message, setMessage] = useState('');
   const dispatch = useDispatch();
+
+  const status = useSelector((state) => state.categoriesReducer);
 
   return (
     <>
       <button
         type="submit"
         className={styles.primaryButtonBig}
-        onClick={() => dispatch(checkStatus())}
+        onClick={() => {
+          setMessage(status);
+          dispatch(checkStatus());
+        }}
       >
         Check Status
       </button>
-      <p className={styles.message}>{status}</p>
+      <p className={styles.message}>{message}</p>
     </>
   );
 };
