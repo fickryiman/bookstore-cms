@@ -1,7 +1,7 @@
 // Initial state:
 const bookItems = [
   {
-    id: 'item1',
+    item_id: 'item1',
     title: 'The Great Gatsby',
     author: 'John Smith',
     category: 'Fiction',
@@ -9,7 +9,7 @@ const bookItems = [
     chapter: 'Chapter17',
   },
   {
-    id: 'item2',
+    item_id: 'item2',
     title: 'Anna Karenina',
     author: 'Leo Tolstoy',
     category: 'Fiction',
@@ -17,7 +17,7 @@ const bookItems = [
     chapter: 'Introduction',
   },
   {
-    id: 'item3',
+    item_id: 'item3',
     title: 'The Selfish Gene',
     author: 'Richard Dawkins',
     category: 'Nonfiction',
@@ -25,7 +25,7 @@ const bookItems = [
     chapter: 'Chapter23',
   },
   {
-    id: 'item4',
+    item_id: 'item4',
     title: 'Capital in the Twenty-First Century',
     author: 'Suzanne Collins',
     category: 'Economy',
