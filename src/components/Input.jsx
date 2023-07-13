@@ -33,6 +33,7 @@ const Input = () => {
           onChange={handleChange}
         >
           <option disabled style={{ color: '#a09d9d' }}>Author</option>
+          <option>Fickry Bil Iman</option>
           <option>Suzanne Collins</option>
           <option>Frank Herbert</option>
         </select>
