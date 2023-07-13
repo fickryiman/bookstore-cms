@@ -1,41 +1,70 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/books';
 import styles from '../styles/Input.module.css';
 
 const Input = () => {
-  const [state, setState] = useState({
-    book: '',
-    category: '',
+  const [entry, setEntry] = useState({
+    title: '',
+    author: '',
   });
 
+  const categories = ['Action', 'Science Fiction', 'Economy'];
+
+  const categoryOptions = categories.map((category) => (
+    <option value={category} key={category.id}>
+      {category}
+    </option>
+  ));
+
   const handleChange = (e) => {
-    setState({
-      ...state,
-      [e.target.value]: e.target.value,
-    });
+    const input = e.target.value;
+
+    switch (e.target.name) {
+      case 'title':
+        setEntry((value) => ({ ...value, title: input }));
+        break;
+      case 'author':
+        setEntry((value) => ({ ...value, author: input }));
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newBook = {
+      item_id: uuidv4(),
+      title: entry.title,
+      author: entry.author,
+      category: 'none',
+    };
+    dispatch(addBook(newBook));
   };
 
   return (
     <section>
       <h2 className={styles.formTitle}>ADD NEW BOOK</h2>
-      <form className={styles.addForm}>
+      <form className={styles.addForm} onSubmit={handleSubmit}>
         <input
-          name="book"
+          name="title"
           type="text"
           placeholder="Book Title"
           className={`${styles.input} ${styles.titleInput}`}
           onChange={handleChange}
         />
-        <select
-          id="category"
-          name="category"
+        <input
+          name="author"
           type="text"
-          className={`${styles.input} ${styles.categoryInput}`}
+          placeholder="Book Author"
+          className={`${styles.input} ${styles.titleInput}`}
           onChange={handleChange}
         >
-          <option disabled style={{ color: '#a09d9d' }}>Author</option>
-          <option>Fickry Bil Iman</option>
-          <option>Suzanne Collins</option>
-          <option>Frank Herbert</option>
+          {categoryOptions}
         </select>
         <button
           type="submit"

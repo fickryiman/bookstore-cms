@@ -54,7 +54,7 @@ However, I will only need to implement the /books page (see the image below). Th
 </p>
 
 ### Projects list
-I will start your "Bookstore" website only with React code. Then I will be building the rest of it and learning Redux Toolkit for the whole week.
+I will start "Bookstore" website only with React code. Then I will be building the rest of it and learning Redux Toolkit for the whole week.
 
 Here is the list of projects that will guide me through the steps described below. I will find details about each of the project requirements in the upcoming program activities.
 
@@ -91,7 +91,7 @@ This is the first project of the Bookstore application. I will set up the enviro
 #### Project 2: Add reducers and actions.
 Install [React Router V6](https://reactrouter.com/en/main/start/tutorial#setup)
 [Setup router](https://reactrouter.com/en/main/start/tutorial#adding-a-router) inside of <App>
-Add 2 routes in your application, each should render a page component:
+Add 2 routes in this application, each should render a page component:
  - /
  - /categories
  - 
@@ -187,7 +187,7 @@ Create components inside of the /components directory:
 ## 🚀 Live Demo <a name=""></a>
 
 <!-- > Add a link to your deployed project. -->
-- Click the following url for [... Live Demo ...]()
+- Click the following url for [... Live Demo ...](https://bookstore-cms-ruby.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,4 +1,7 @@
-/* eslint-disable react/prop-types */
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 import styles from '../styles/Item.module.css';
 
 const Item = ({ bookstore }) => (
@@ -42,14 +45,39 @@ const Item = ({ bookstore }) => (
                 {bookstore.chapter[Math.round(Math.random() * 24)]}
               </p>
             </div>
-            <div>
-              <button className={styles.primaryButton} type="button">UPDATE PROGRESS</button>
+          </div>
+          <div className={styles.progressContainer}>
+            <div className={styles.circularProgressContainer}>
+              <div className={styles.circularProgress} />
+            </div>
+            <div className={styles.progressStat}>
+              <p className={styles.percentComplete}>64%</p>
+              <p className={styles.completed}>Completed</p>
+            </div>
+            <div className={styles.progressDivider} />
+            <div className={styles.currentChapterContainer}>
+              <div>
+                <p className={styles.currentChapterLabel}>CURRENT CHAPTER</p>
+                <p className={styles.currentChapter}>Introduction</p>
+              </div>
+              <div>
+                <button className={styles.primaryButton} type="button">
+                  UPDATE PROGRESS
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </li>
-);
+    </li>
+  );
+};
+
+Item.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+};
 
 export default Item;
