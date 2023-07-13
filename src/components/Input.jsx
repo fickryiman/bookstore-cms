@@ -7,14 +7,6 @@ const Input = () => {
     category: '',
   });
 
-  const categories = ['Action', 'Science Fiction', 'Economy'];
-
-  const categoryOptions = categories.map((category) => (
-    <option value={category} key={category.id}>
-      {category}
-    </option>
-  ));
-
   const handleChange = (e) => {
     setState({
       ...state,
@@ -40,7 +32,9 @@ const Input = () => {
           className={`${styles.input} ${styles.categoryInput}`}
           onChange={handleChange}
         >
-          {categoryOptions}
+          <option disabled style={{ color: '#a09d9d' }}>Author</option>
+          <option>Suzanne Collins</option>
+          <option>Frank Herbert</option>
         </select>
         <button
           type="submit"

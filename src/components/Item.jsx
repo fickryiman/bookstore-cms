@@ -28,14 +28,19 @@ const Item = ({ bookstore }) => (
             <div className={styles.circularProgress} />
           </div>
           <div className={styles.progressStat}>
-            <p className={styles.percentComplete}>64%</p>
+            <p className={styles.percentComplete}>
+              {bookstore.progress}
+              %
+            </p>
             <p className={styles.completed}>Completed</p>
           </div>
           <div className={styles.progressDivider} />
           <div className={styles.currentChapterContainer}>
             <div>
               <p className={styles.currentChapterLabel}>CURRENT CHAPTER</p>
-              <p className={styles.currentChapter}>Chapter17</p>
+              <p className={styles.currentChapter}>
+                {bookstore.chapter[Math.round(Math.random() * 24)]}
+              </p>
             </div>
             <div>
               <button className={styles.primaryButton} type="button">UPDATE PROGRESS</button>
